@@ -19,7 +19,7 @@ def esegui_query_sparql(percorso_file_query):
         logger.info(f"Esecuzione query_sparql da file: {percorso_file_query}")
         headers = {
             "Accept": "application/sparql-results+json",
-            "Content-Type": "application/sparql-query_sparql"
+            "Content-Type": "application/sparql-query"
         }
         response = requests.post(ENDPOINT, data=query.encode("utf-8"), headers=headers)
         response.raise_for_status()
