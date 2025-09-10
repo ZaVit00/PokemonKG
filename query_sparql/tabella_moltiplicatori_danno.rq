@@ -1,0 +1,17 @@
+# Definizione dei prefissi per abbreviare le URI usate
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX pokemonkg: <https://pokemonkg.org/ontology#>
+
+# Selezione dei tipi di attacco, tipi bersaglio e valori di moltiplicatore
+SELECT ?attackerType ?defenderType ?multiplier
+WHERE {
+  # Individua le relazioni che rappresentano il moltiplicatore di danno tra tipi
+  # DamageMultiplierRelation è una classe
+  ?rel rdf:type pokemonkg:DamageMultiplierRelation ;
+       # Tipo di mossa che attacca
+       pokemonkg:moveType ?attackerType ;
+       # Tipo del bersaglio difensore
+       pokemonkg:targetType ?defenderType ;
+       # Valore numerico del moltiplicatore di danno
+       pokemonkg:damageMultiplierValue ?multiplier .
+}

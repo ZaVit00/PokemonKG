@@ -1,0 +1,8 @@
+PREFIX pokemonkg: <https://pokemonkg.org/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?pokemon ?type
+WHERE {
+  ?pokemon pokemonkg:hasType ?type .
+  ?pokemon rdf:type pokemonkg:Species .
+}

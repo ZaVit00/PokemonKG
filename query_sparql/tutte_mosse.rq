@@ -1,0 +1,14 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX pokemonkg: <https://pokemonkg.org/ontology#>
+
+SELECT DISTINCT ?move ?basePower ?accuracy ?pp ?moveType ?catMove
+WHERE {
+  ?move rdf:type pokemonkg:Move .
+  ?move pokemonkg:basePower ?basePower .
+  ?move pokemonkg:accuracy ?accuracy .
+  ?move pokemonkg:basePowerPoints ?pp .
+  ?move pokemonkg:hasType ?moveType .
+  ?move rdf:type ?catMove .
+  VALUES ?catMove { pokemonkg:PhysicalMove pokemonkg:SpecialMove pokemonkg:StatusMove }
+}
+ORDER BY ?move

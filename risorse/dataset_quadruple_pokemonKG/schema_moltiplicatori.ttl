@@ -1,0 +1,34 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix pokemonkg: <https://pokemonkg.org/ontology#> .
+@prefix pkgi: <https://pokemonkg.org/instance/> .
+
+####################################################################
+# Classe per la relazione di moltiplicatore di danno
+####################################################################
+pokemonkg:DamageMultiplierRelation rdf:type owl:Class ;
+    rdfs:label "Relazione di moltiplicatore di danno tra tipi"@it .
+
+####################################################################
+# Proprietà oggetto
+# Nota: i valori di queste proprietà sono URI di tipi predefiniti
+#       (namespace PokéType_*), non istanze di una classe.
+#       Pertanto, non viene specificato un rdfs:range formale.
+####################################################################
+pokemonkg:moveType rdf:type owl:ObjectProperty ;
+    rdfs:domain pokemonkg:DamageMultiplierRelation ;
+    rdfs:label "Tipo della mossa"@it .
+
+pokemonkg:targetType rdf:type owl:ObjectProperty ;
+    rdfs:domain pokemonkg:DamageMultiplierRelation ;
+    rdfs:label "Tipo del bersaglio"@it .
+
+####################################################################
+# Proprietà dato per il moltiplicatore
+####################################################################
+pokemonkg:damageMultiplierValue rdf:type owl:DatatypeProperty ;
+    rdfs:domain pokemonkg:DamageMultiplierRelation ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Valore del moltiplicatore"@it .

@@ -1,0 +1,21 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX pokemonkg: <https://pokemonkg.org/ontology#>
+
+SELECT DISTINCT ?move ?typeClass
+       (BOUND(?power) AS ?hasPower)
+       (BOUND(?accuracy) AS ?hasAccuracy)
+       (BOUND(?pp) AS ?hasPP)
+WHERE {
+  ?move rdf:type ?typeClass .
+  VALUES ?typeClass {
+    pokemonkg:SpecialMove
+    pokemonkg:PhysicalMove
+    pokemonkg:StatusMove
+  }
+  OPTIONAL { ?move pokemonkg:basePower ?power. }
+  OPTIONAL { ?move pokemonkg:accuracy ?accuracy. }
+  OPTIONAL { ?move pokemonkg:basePowerPoints ?pp. }
+
+  FILTER( !BOUND(?power) || !BOUND(?accuracy) || !BOUND(?pp) )
+}
+ORDER BY ?typeClass ?move

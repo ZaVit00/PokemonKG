@@ -1,0 +1,7 @@
+PREFIX pokemonkg: <https://pokemonkg.org/ontology#>
+
+# dammi tutti gli oggetti che compaiono nella quadrupla dove il predicato è hasType
+SELECT DISTINCT ?tipo
+WHERE {
+  ?s pokemonkg:hasType ?tipo .
+}

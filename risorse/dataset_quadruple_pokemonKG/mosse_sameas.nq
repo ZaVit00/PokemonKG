@@ -1,0 +1,7 @@
+<https://pokemonkg.org/instance/move/poisonpowder> <http://www.w3.org/2002/07/owl#sameAs> <https://pokemonkg.org/instance/move/poison-powder> <https://pokemonkg.org/dataset/manual-alignment> .
+<https://pokemonkg.org/instance/move/grasswhistle> <http://www.w3.org/2002/07/owl#sameAs> <https://pokemonkg.org/instance/move/grass-whistle> <https://pokemonkg.org/dataset/manual-alignment> .
+<https://pokemonkg.org/instance/move/featherdance> <http://www.w3.org/2002/07/owl#sameAs> <https://pokemonkg.org/instance/move/feather-dance> <https://pokemonkg.org/dataset/manual-alignment> .
+<https://pokemonkg.org/instance/move/conversion2> <http://www.w3.org/2002/07/owl#sameAs> <https://pokemonkg.org/instance/move/conversion-2> <https://pokemonkg.org/dataset/manual-alignment> .
+<https://pokemonkg.org/instance/move/sonicboom> <http://www.w3.org/2002/07/owl#sameAs> <https://pokemonkg.org/instance/move/sonic-boom> <https://pokemonkg.org/dataset/manual-alignment> .
+<https://pokemonkg.org/instance/move/smellingsalt> <http://www.w3.org/2002/07/owl#sameAs> <https://pokemonkg.org/instance/move/smelling-salt> <https://pokemonkg.org/dataset/manual-alignment> .
+<https://pokemonkg.org/instance/move/faint-attack> <http://www.w3.org/2002/07/owl#sameAs> <https://pokemonkg.org/instance/move/feint-attack> <https://pokemonkg.org/dataset/manual-alignment> .

@@ -1,0 +1,17 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix pokemonkg: <https://pokemonkg.org/ontology#> .
+
+pokemonkg:hasArchetype rdf:type owl:DatatypeProperty ;
+    rdfs:domain pokemonkg:Pokemon ;
+    rdfs:range xsd:string ;
+    rdfs:label "Archetipo"@it ;
+    rdfs:comment "Archetipo comportamentale del Pokémon appreso via clustering"@it .
+
+pokemonkg:hasSubArchetype rdf:type owl:DatatypeProperty ;
+    rdfs:domain pokemonkg:Pokemon ;
+    rdfs:range xsd:string ;
+    rdfs:label "Subarchetipo"@it ;
+    rdfs:comment "Subcategoria dell'archetipo, appresa via clustering"@it .
