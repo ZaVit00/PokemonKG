@@ -326,7 +326,7 @@ class RicercaLocale:
             valore_vicino = vicino.funzione_valutazione()
             delta = valore_vicino - valore_corrente
 
-            if delta > 0:
+            if delta > 0: #passo migliorativo
                 nodo_corrente = vicino
                 valore_corrente = valore_vicino
             else:

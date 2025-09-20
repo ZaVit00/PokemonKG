@@ -43,7 +43,7 @@ class RicercaSpazioStati:
         #variabile globale
         soluzioni: List[List[NodoSpazioStati]] = []
 
-        def dfs_limitata(stato_corrente: NodoSpazioStati, limite: int, percorso: List[StatoCombattimento]):
+        def dfs_limitata(stato_corrente: NodoSpazioStati, limite: int, percorso: List[NodoSpazioStati]):
             if stato_corrente.is_goal():
                 soluzioni.append(percorso + [stato_corrente])
                 return #trovata soluzione stop
@@ -56,6 +56,7 @@ class RicercaSpazioStati:
 
         #profondità che viene incrementata passo passo
         for profondita in range(profondita_massima + 1):
+            soluzioni.clear()
             dfs_limitata(stato_iniziale, profondita, [])
             if soluzioni:
                 # abbiamo trovato almeno una soluzione alla profondità corrente
